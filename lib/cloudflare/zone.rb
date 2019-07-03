@@ -185,7 +185,6 @@ module Cloudflare
 
 		def purge_cache(params = DEFAULT_PURGE_CACHE_PARAMS)
 			response = self['purge_cache'].post(params.to_json)
-			response.successful?
 		end
 
 		def to_s
