@@ -27,7 +27,7 @@ require_relative 'connection'
 module Cloudflare
 	class Connection < Resource
 		def zones
-			@zones ||= Zones.new(concat_urls(url, 'zones'), options)
+			@zones ||= Zones.new(concat_urls(url, 'zones'), **options)
 		end
 	end
 
